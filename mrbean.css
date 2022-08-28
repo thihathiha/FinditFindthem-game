@@ -1,0 +1,588 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	height: 100vh;
+	
+	overflow: hidden;
+}
+
+@media screen and (orientation: portrait) {
+
+    #findit{
+        display: none;
+    }
+
+    span{
+        opacity: 0;
+    }
+
+    a{
+        display: none;
+    }
+    body{
+        height: 100vh;
+        background: linear-gradient(
+                    rgba(0,0,0,0.7),
+                    rgba(0,0,0,0.7)
+                     ),url('./img/mrbean/beanbg.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+
+    }
+
+    body::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: url('./img/rotate.png');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        position: absolute;
+        top: 42%;
+        left: 50%;
+
+        transform: translate(-50%,-50%);
+    }
+
+    body::after{
+        content: 'Please rotate your screen';
+        width: 100%;
+        height: 100%;
+        color: #888;
+        font-size: 3.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        transform: translateY(35px);
+
+        animation: ani 1.7s;
+    }
+
+    @keyframes ani{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    }
+
+     .alertbox{
+        opacity: 0;
+    }
+
+    .goverbox{
+        opacity: 0;
+    }
+
+.container-fluid{
+	margin: 0;
+	padding: 0;
+}
+
+.imgboxs{	
+	margin: 0;
+	padding: 0;
+}
+
+.imgboxs img{
+    height: 760px;
+}
+
+.smallboxs{
+	width: 100%;
+	height: 500px;
+	position: absolute;
+
+   z-index: 3;
+
+   top: 0;
+   left: 0;
+}
+
+.watermelon{
+	position: absolute;
+	top: 92%;
+	left: 7%;
+    opacity: 0.7;
+}
+
+.cherry{
+	position: absolute;
+	top: 44.3%;
+	right: 18%;
+    opacity: 0.8;
+
+    transform: rotate(-17deg);
+}
+
+.fly{
+	position: absolute;
+	top: 52%;
+	left: 58.9%;
+}
+
+.banana{
+	position: absolute;
+	top: 35%;
+	left: 5%;
+
+    opacity: 0.6;
+}
+
+.orange{
+	position: absolute;
+	top: 120%;
+	left: 26%;
+
+}
+
+.flower{
+	position: absolute;
+	top: 51.8%;
+	left: 45%;
+}
+
+.fox{
+	position: absolute;
+	top: 15.8%;
+	left: 71.5%;
+
+    transform: rotate(80deg);
+
+    opacity: 0.8;
+}
+
+.bamboo{
+	position: absolute;
+	top: 43%;
+	left: 29.6%;
+
+    transform: rotate(6deg);
+}
+
+.caterpillar{
+   position: absolute;
+   top: 39%;
+   left: 40%;
+   opacity: 0.8;
+}
+
+.grape{
+	position: absolute;
+	top: 57%;
+	left: 20%;
+
+    opacity: 0.7;
+}
+.things{
+    animation: thinganni 0.5s forwards;
+
+    z-index: 2;
+}
+
+@keyframes thinganni{
+	0%{
+       transform: scale(1);
+	}
+	
+	100%{
+       transform: scale(2);
+       opacity: 0;
+       display: none;
+	}
+}
+
+@media (max-width: 1000px){
+
+    .imgboxs img{
+        height: 490px;
+    }
+
+    .smallboxs{
+    width: 90%;
+  }
+
+    .watermelon{
+        top: 58.8%;
+        left: 6%;
+
+        width: 30px;
+    }
+    
+    .cherry{
+        width: 60px;
+        top: 30%;
+        right: 8%;
+    }
+    
+    .fly{
+        width: 30px;
+        top: 33.5%;
+        left: 65.6%;
+    }
+    
+    .banana{
+        top: 23%;
+        left: 5%;
+        width: 14px;
+    }
+    
+    .orange{
+        top: 72%;
+        left: 27%;
+        width: 110px;
+    }
+    
+    .flower{
+        width: 30px;
+        top: 34%;
+        left: 49.3%;
+    }
+    
+    .fox{
+        position: absolute;
+        top: 46.5%;
+        left: 78%;
+
+        width: 40px;
+    }
+    
+    .bamboo{
+        width: 40px;
+        top: 28.3%;
+        left: 33%;
+    }
+    
+    .caterpillar{
+       top: 23.8%;
+       left: 45%;
+    }
+    
+    .grape{
+        width: 30px;
+        top: 37%;
+        left: 21.9%;
+    }
+
+}
+
+.textboxs{	
+	margin: 0;
+	padding: 0;  
+    background-color: #393b3a;  
+    border: 7px solid #2b2b2b; 
+}
+
+.fortexts ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border-bottom: 2px solid #f4f4f4;
+}
+
+@media (max-width: 1000px) {
+    .fortexts ul {
+        font-size: 12px;
+        padding-bottom: 20px;
+    }
+    .fortexts ul li {
+        letter-spacing: 1px;
+    }
+}
+
+.fortimes{
+	border-bottom: 2px solid #f4f4f4;
+}
+
+.btn{
+	width: 50%;
+	height: 45px;
+	
+	line-height: 30px;
+	background-color: #f1f1f1;
+
+}
+
+.hintwords{
+   animation: hintsani 2s forwards;
+}
+
+@keyframes hintsani{
+    from{
+        transform: scale(1);
+    }
+   to{
+        transform: scale(1.8);
+        border: 2px dotted #24ffda;
+        border-radius: 50%;
+    }
+}
+
+.forhints{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+
+
+    position: relative;
+}
+
+.gphints{
+    width: 100px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+
+    position: relative;
+    z-index: 0;
+}
+
+.gphints::before{
+    content: 'Hints';
+    width: 100px;
+    height: 50px;
+    color: rgba(0, 0, 0, 0.4);
+   
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 45px;
+
+    position: absolute;
+    left: 0;
+    top: 5px;
+    z-index: 0;
+}
+
+.mychances{
+    color: #fff;
+    background-color: #5a62fa;
+    padding: 2px 10px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -50%;
+    right: 25%;
+}
+
+.hints{
+    width: 100px;
+    height: 50px;
+    background-color: #fff;
+    color: #2b2b2b;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 5px;
+}
+
+.hints1, .hints2, .hints3, .hints4, .hints5, .hints6, .hints7, .hints8, .hints9, .hints10{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.hints1{
+    z-index: 10;
+}
+
+
+.hints2{
+    z-index: 9;
+}
+
+.hints3{
+    z-index: 8;
+}
+
+.hints4{
+    z-index: 7;
+}
+
+.hints5{
+    z-index: 6;
+} 
+
+.hints6{
+    z-index: 5;
+} 
+
+.hints7{
+    z-index: 4;
+} 
+
+.hints8{
+    z-index: 3;
+}
+
+.hints9{
+    z-index: 2;
+} 
+
+.hints10{
+    z-index: 1;
+} 
+
+/*Start Modal Box*/
+.alertbox{
+	width: 300px;
+	height: 330px;
+	background-color: #fff;
+	border: 3px solid #fff;
+	border-radius: 10px;
+
+	margin-top: 50px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	position: absolute;
+	top: 25%;
+	left: 40%;
+
+	
+}
+
+.blur{
+	filter: blur(3px);
+}
+
+.emojibox{
+	padding: 20px 0px;
+}
+
+.alerttext{
+	text-align: center;
+}
+.alerttext h4{
+	color: #303030;
+}
+
+.nextbtn{
+	padding: 10px 20px;
+	background-color: #424242;
+	color: #fff;
+	border: 3px solid #424242;
+	border-radius: 5px;
+}
+.nextbtn a{
+	text-decoration: none;
+	color: #f1f1f1;
+	font-weight: 500;
+}
+
+.goverbox{
+	width: 300px;
+	height: 330px;
+	background-color: #fff;
+	border: 3px solid #fff;
+	border-radius: 10px;
+
+	margin-top: 50px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	position: absolute;
+	top: 25%;
+	left: 40%;
+
+	
+}
+
+@media (max-width: 1000px){
+   .forhints{
+   	  margin-top: 25px;
+   }
+
+   .gphints{
+    width: 80px;
+    height: 38px;
+  }
+
+  .gphints::before{
+  	 width: 80px;
+    height: 38px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 35px;
+
+    position: absolute;
+    left: 0;
+    top: 5px;
+  }
+
+  .hints{
+    width: 80px;
+    height: 38px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 35px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+  }
+
+  .mychances{
+  	font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -50%;
+    right: 20%;
+}
+
+.goverbox{
+	width: 300px;
+	height: 300px;
+
+	margin-top: 50px;
+
+	position: absolute;
+	top: 8%;
+	left: 28%;
+
+	
+}
+
+  .alertbox{
+	width: 300px;
+	height: 320px;
+
+	margin-top: 50px;
+
+	position: absolute;
+	top: 8%;
+	left: 28%;
+
+	
+}
+
+}
+/*End Modal Box*/
